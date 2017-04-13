@@ -108,7 +108,8 @@ if type(fib()) == types.GeneratorType:
 
 #---------------------Pandas DataFrames----------------
 
-# Pandas abd DataFrames : Pandas is a high-level data manipulation tool. It is built on the Numpy package and its key data structure is called the DataFrame. DataFrames allow you to store and manipulate tabular data in rows of observations and columns of variables.
+# Pandas and DataFrames : Pandas is a high-level data manipulation tool. It is built on the Numpy package and its key data structure is called the DataFrame. DataFrames allow you to store and manipulate tabular data in rows of observations and columns of variables.
+
 
 dict = {"country": ["Brazil", "Russia", "India", "China", "South Africa"],
        "capital": ["Brasilia", "Moscow", "New Dehli", "Beijing", "Pretoria"],
@@ -144,7 +145,7 @@ print(stocks[['MSFT']])
 
 # Print out country column as Pandas DataFrame
 
-print(cars[['MSFT']])
+print(stocks[['MSFT']])
 
 # Print out DataFrame with SPX and MSFT columns
 
