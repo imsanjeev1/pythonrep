@@ -132,39 +132,37 @@ print(brics)
 # Another way to create a DataFrame is by importing a csv file using Pandas. Now, the csv
 
 stocks = pd.read_csv('stock.csv') # Displayed all csv files
-print(stocks)
+print('Display all record', stocks)
 # Indexing DataFrames :: There are several ways to index a Pandas DataFrame. One of the easiest ways to do this is by using square bracket notation.
 
-#In the example below, you can use square brackets to select one column of the cars DataFrame. You can either use a single bracket or a double bracket. The single bracket with output a Pandas Series, while a double bracket will output a Pandas DataFrame.
-
+#In the example below, you can use square brackets to select one column of the stocks DataFrame. You can either use a single bracket or a double bracket. The single bracket with output a Pandas Series, while a double bracket will output a Pandas DataFrame.
 
 stocks = pd.read_csv('stock.csv', index_col = 0)
 
-# Print out country column as Pandas Series ,below is the syntax
-print(stocks[['MSFT']])
+# Print out MSFT column as Pandas Series ,below is the syntax
+print('Pandas Series', stocks[['MSFT']])
 
-# Print out country column as Pandas DataFrame
+# Print out MSFT column as Pandas DataFrame
 
-print(stocks[['MSFT']])
+print('Pandas DataFrame', stocks[['MSFT']])
 
 # Print out DataFrame with SPX and MSFT columns
 
-print(stocks[['MSFT', 'SPX']])
+print('Get Columns based rescord', stocks[['MSFT', 'SPX']])
 
 # Square brackets can also be used to access observations (rows) from a DataFrame. For example:
 
 # Print out first 4 observations
 
-print(stocks[0:4])
-
+print('First 4 Observation::', stocks[0:4])
 
 # Print out fifth, sixth, and seventh observation
 
-print(stocks[4:6])
+print('Get Fifth,Sixth and seventh Observation', stocks[4:6])
 
 # Print out observation for MSFT
 
-print(stocks.iloc[2])
+print('Get MSFT Observation', stocks.iloc[2])
 
 # Print out observations for SPX and MSFT
 
