@@ -140,15 +140,15 @@ print(stocks)
 stocks = pd.read_csv('stock.csv', index_col = 0)
 
 # Print out country column as Pandas Series ,below is the syntax
-#print(stocks[['MSFT']])
+print(stocks[['MSFT']])
 
 # Print out country column as Pandas DataFrame
 
-#print(cars[['MSFT']])
+print(cars[['MSFT']])
 
 # Print out DataFrame with SPX and MSFT columns
 
-#print(stocks[['MSFT', 'SPX']])
+print(stocks[['MSFT', 'SPX']])
 
 # Square brackets can also be used to access observations (rows) from a DataFrame. For example:
 
@@ -167,4 +167,4 @@ print(stocks.iloc[2])
 
 # Print out observations for SPX and MSFT
 
-print(stocks.loc[['SPX', 'MSFT']])
+#print(stocks.loc[['SPX', 'MSFT']])
