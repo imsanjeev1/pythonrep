@@ -114,7 +114,7 @@ if type(fib()) == types.GeneratorType:
 dict = {"country": ["Brazil", "Russia", "India", "China", "South Africa"],
        "capital": ["Brasilia", "Moscow", "New Dehli", "Beijing", "Pretoria"],
        "area": [8.516, 17.10, 3.286, 9.597, 1.221],
-       "population": [200.4, 143.5, 1252, 1357, 52.98] }
+       "population": [200.4, 143.5, 1252, 1357, 52.98]}
 
 import pandas as pd
 brics = pd.DataFrame(dict)
@@ -132,15 +132,16 @@ print(brics)
 # Another way to create a DataFrame is by importing a csv file using Pandas. Now, the csv
 
 stocks = pd.read_csv('stock.csv') # Displayed all csv files
-print('Display all record', stocks)
+#print('Display all record', stocks)
 # Indexing DataFrames :: There are several ways to index a Pandas DataFrame. One of the easiest ways to do this is by using square bracket notation.
 
 #In the example below, you can use square brackets to select one column of the stocks DataFrame. You can either use a single bracket or a double bracket. The single bracket with output a Pandas Series, while a double bracket will output a Pandas DataFrame.
 
 stocks = pd.read_csv('stock.csv', index_col = 0)
-
+print('1111111111111', stocks)
+#print('sanjeev',stocks.head())
 # Print out MSFT column as Pandas Series ,below is the syntax
-print('Pandas Series', stocks[['MSFT']])
+print('Pandas Series', stocks['MSFT'])
 
 # Print out MSFT column as Pandas DataFrame
 
@@ -148,7 +149,7 @@ print('Pandas DataFrame', stocks[['MSFT']])
 
 # Print out DataFrame with SPX and MSFT columns
 
-print('Get Columns based rescord', stocks[['MSFT', 'SPX']])
+#print('Get Columns based rescord', stocks[['MSFT', 'SPX']])
 
 # Square brackets can also be used to access observations (rows) from a DataFrame. For example:
 
@@ -167,3 +168,10 @@ print('Get MSFT Observation', stocks.iloc[2])
 # Print out observations for SPX and MSFT
 
 #print(stocks.loc[['SPX', 'MSFT']])
+
+
+Example =2 
+dict = {'first':['sanjeev','niraj','jitu'],'last':['kumar','singh','kirar']}
+data = pd.DataFrame(dict, columns=['first','last'])
+
+print(data)
